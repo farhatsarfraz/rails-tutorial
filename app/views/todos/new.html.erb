@@ -1,25 +1,2 @@
 <h1>My Form</h1>
-<% if @todos.errors.any? %>
-<h1> following error preventing the todo from being saved %>
-</h1>
-<ul>
-<% @todos.errors.full_messages.each do |msg| %>
-    <li>
-    <%= msg %>
-    </li>
-    <% end %>
-    </ul>
-    <% end %>
-<%= form_for @todos do |f| %>
-<p>
-<%= f.label :name %>
-<%= f.text_field :name %>
-</p>
-<p>
-<%= f.label :description %>
-<%= f.text_field :description  %>
-</p>
-<p> 
-<%= f.submit %>
-</p>
-<% end %>
+<%= render 'form' %>
